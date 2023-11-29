@@ -1,2 +1,3 @@
-# Gerenciador-de-Biblioteca
-Projeto: Sistema de Gerenciamento de Livros / Biblioteca
+# Library Management
+
+Project: Library Management System
