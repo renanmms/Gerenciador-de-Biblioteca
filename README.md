@@ -8,7 +8,7 @@ Develop a library management system with the following features:
 
 * [x] Create a book
 
-    * [ ] Validate data (PLUS 1)
+    * [x] Validate data (PLUS 1)
 
 * [x] Get all books
 
