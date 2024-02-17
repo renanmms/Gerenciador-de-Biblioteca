@@ -10,7 +10,7 @@ Develop a library management system with the following features:
 
     * [ ] Validate data (PLUS 1)
 
-* [ ] Get all books
+* [x] Get all books
 
 * [x] Get one book
 
