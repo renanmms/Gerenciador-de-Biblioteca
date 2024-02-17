@@ -22,6 +22,13 @@ namespace LibraryManager.API.Controllers
             return Ok(book);
         }
 
+        [HttpGet("get")]
+        public IActionResult GetAll(string query = "")
+        {
+            var books = _bookRepository.GetAll(query);
+            return Ok(books);
+        }
+
         [HttpPost("create")]
         public IActionResult Post(CreateBookViewModel book)
         {
