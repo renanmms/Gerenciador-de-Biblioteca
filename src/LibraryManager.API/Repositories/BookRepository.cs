@@ -21,6 +21,17 @@ namespace LibraryManager.API.Repositories
             return book.Id;
         }
 
+        public IEnumerable<Book> GetAll(string query)
+        {
+            IQueryable<Book> books = _context.Books;
+
+            if(!string.IsNullOrWhiteSpace(query)){
+                books = books.Where(b => b.Title.Contains(query) || b.Author.Contains(query));
+            }
+
+            return books;
+        }
+
         public Book GetById(int id)
         {
             var books = _context.Books;
