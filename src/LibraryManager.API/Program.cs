@@ -2,6 +2,9 @@ using Microsoft.EntityFrameworkCore;
 using LibraryManager.API.Context;
 using LibraryManager.API.Repositories;
 using LibraryManager.API.Repositories.Interfaces;
+using FluentValidation.AspNetCore;
+using LibraryManager.API.ViewModels;
+using LibraryManager.API.Filters;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,7 +13,10 @@ var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("LibraryManagementCS");
 builder.Services.AddDbContext<LibraryContext>(options => options.UseSqlServer(connectionString));
 
-builder.Services.AddControllers();
+builder.Services
+    .AddControllers(options => options.Filters.Add(typeof(ValidationFilter)))
+    .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<CreateBookViewModel>());
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
