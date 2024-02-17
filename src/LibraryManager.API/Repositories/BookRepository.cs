@@ -20,5 +20,13 @@ namespace LibraryManager.API.Repositories
 
             return book.Id;
         }
+
+        public Book GetById(int id)
+        {
+            var books = _context.Books;
+            var book = books.SingleOrDefault(b => b.Id == id);
+
+            return book;
+        }
     }
 }
