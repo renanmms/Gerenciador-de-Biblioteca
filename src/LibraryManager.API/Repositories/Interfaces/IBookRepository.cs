@@ -7,5 +7,6 @@ namespace LibraryManager.API.Repositories.Interfaces
         int Create(Book book);
         Book GetById(int id);
         IEnumerable<Book> GetAll(string query);
+        int Delete(int id);
     }
 }

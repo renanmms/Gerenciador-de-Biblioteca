@@ -1,6 +1,7 @@
 using LibraryManager.API.Context;
 using LibraryManager.API.Models;
 using LibraryManager.API.Repositories.Interfaces;
+using Microsoft.EntityFrameworkCore;
 
 namespace LibraryManager.API.Repositories
 {
@@ -19,6 +20,15 @@ namespace LibraryManager.API.Repositories
             _context.SaveChanges();
 
             return book.Id;
+        }
+
+        public int Delete(int id)
+        {
+            _context.Books
+                .Where(b => b.Id == id)
+                .ExecuteDelete();
+
+            return id;
         }
 
         public IEnumerable<Book> GetAll(string query)
