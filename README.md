@@ -14,7 +14,7 @@ Develop a library management system with the following features:
 
 * [x] Get one book
 
-* [ ] Delete book
+* [x] Delete book
 
 * [x] Create a user (PLUS 1)
 
