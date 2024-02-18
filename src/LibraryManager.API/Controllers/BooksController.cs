@@ -39,7 +39,20 @@ namespace LibraryManager.API.Controllers
             }catch(Exception ex){
                 return BadRequest();
             }
-            
+        }
+
+        [HttpDelete("delete")]
+        public IActionResult Delete(int id)
+        {
+            try
+            {
+                _bookRepository.Delete(id);
+                return Ok("Book deleted successfully");
+            }
+            catch (Exception ex)
+            {
+                return BadRequest();
+            }
         }
     }
 }
