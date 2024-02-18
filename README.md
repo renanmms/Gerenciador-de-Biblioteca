@@ -24,3 +24,9 @@ Develop a library management system with the following features:
 
 * [ ] Retrieve a book (PLUS 2)
     * [ ] Show alert message if loan is expired (PLUS 2)
+
+### Personal goals
+
+* [ ] Add JWT authorization
+* [ ] Add Unit of Work pattern
+* [ ] Implement clean architecture
