@@ -22,6 +22,14 @@ namespace LibraryManager.API.Repositories
             return book.Id;
         }
 
+        public int CreateLoan(Loan loan)
+        {
+            _context.Loans.Add(loan);
+            _context.SaveChanges();
+
+            return loan.BookId;
+        }
+
         public int Delete(int id)
         {
             _context.Books
@@ -48,6 +56,12 @@ namespace LibraryManager.API.Repositories
             var book = books.SingleOrDefault(b => b.Id == id);
 
             return book;
+        }
+
+        public IEnumerable<Loan> GetLoansByBookId(int id)
+        {
+            var userLoans = _context.Loans.Where(l => l.BookId == id);
+            return userLoans;
         }
     }
 }
