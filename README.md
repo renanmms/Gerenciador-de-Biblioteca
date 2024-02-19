@@ -18,9 +18,9 @@ Develop a library management system with the following features:
 
 * [x] Create a user (PLUS 1)
 
-* [ ] Create a loan (PLUS 1)
+* [x] Create a loan (PLUS 1)
 
-    * [ ] Create loan with limit date (PLUS 2)
+    * [x] Create loan with limit date (PLUS 2)
 
 * [ ] Retrieve a book (PLUS 2)
     * [ ] Show alert message if loan is expired (PLUS 2)
