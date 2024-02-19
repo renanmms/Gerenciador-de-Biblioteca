@@ -54,5 +54,26 @@ namespace LibraryManager.API.Controllers
                 return BadRequest();
             }
         }
+
+        [HttpGet("get/loans/{bookId}")]
+        public IActionResult GetLoansByBookId(int bookId)
+        {
+            var loans = _bookRepository.GetLoansByBookId(bookId);
+            return Ok(loans);
+        }
+
+        [HttpPost("create/loan")]
+        public IActionResult CreateLoan(CreateLoanViewModel loan)
+        {
+            try
+            {
+                var bookId = _bookRepository.CreateLoan(CreateLoanViewModel.ToEntity(loan));
+                return Created(nameof(GetLoansByBookId), new {id = bookId});
+            }
+            catch (Exception ex)
+            {       
+                throw;
+            }
+        }
     }
 }
