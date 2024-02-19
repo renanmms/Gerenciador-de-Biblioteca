@@ -41,7 +41,7 @@ namespace LibraryManager.API.Controllers
             }
         }
 
-        [HttpDelete("delete")]
+        [HttpDelete("delete/{id}")]
         public IActionResult Delete(int id)
         {
             try
