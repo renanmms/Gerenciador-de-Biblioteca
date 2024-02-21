@@ -75,5 +75,26 @@ namespace LibraryManager.API.Controllers
                 throw;
             }
         }
+
+        [HttpDelete("return")]
+        public IActionResult Return(ReturnBookViewModel model)
+        {
+            try
+            {
+                var loan = _bookRepository.GetLoan(model.UserId, model.BookId);
+
+                if(loan.IsExpired)
+                {
+                    return BadRequest("Loan is expired! Please contact the library to further details.");
+                }
+
+                _bookRepository.Return(model.UserId, model.BookId);
+                return Ok("Book returned successfully");
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
     }
 }
