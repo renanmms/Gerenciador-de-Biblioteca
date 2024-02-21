@@ -22,8 +22,8 @@ Develop a library management system with the following features:
 
     * [x] Create loan with limit date (PLUS 2)
 
-* [ ] Bring back book (PLUS 2)
-    * [ ] Show alert message if loan is expired (PLUS 2)
+* [x] Bring back book (PLUS 2)
+    * [x] Show alert message if loan is expired (PLUS 2)
 
 ### Personal goals
 
