@@ -63,5 +63,20 @@ namespace LibraryManager.API.Repositories
             var userLoans = _context.Loans.Where(l => l.BookId == id);
             return userLoans;
         }
+
+        public Loan GetLoan(int userId, int bookId)
+        {
+            var loan = _context.Loans
+                .SingleOrDefault(l => l.UserId == userId && l.BookId == bookId);
+
+            return loan;
+        }
+
+        public void Return(int userId, int bookId)
+        {
+            _context.Loans
+                .Where(l => l.UserId == userId && l.BookId == bookId)
+                .ExecuteDelete();
+        }
     }
 }
