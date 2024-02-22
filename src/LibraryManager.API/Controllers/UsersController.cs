@@ -1,4 +1,4 @@
-using LibraryManager.API.ViewModels;
+using LibraryManager.Application.ViewModels;
 using LibraryManager.Infrastructure.Repositories.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 

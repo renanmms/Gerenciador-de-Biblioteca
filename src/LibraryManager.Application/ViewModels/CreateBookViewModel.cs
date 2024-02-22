@@ -1,6 +1,6 @@
 using LibraryManager.Core.Entities;
 
-namespace LibraryManager.API.ViewModels
+namespace LibraryManager.Application.ViewModels
 {
     public class CreateBookViewModel
     {

@@ -1,10 +1,10 @@
 using Microsoft.EntityFrameworkCore;
 using FluentValidation.AspNetCore;
-using LibraryManager.API.ViewModels;
 using LibraryManager.API.Filters;
 using LibraryManager.Infrastructure.Context;
 using LibraryManager.Infrastructure.Repositories.Interfaces;
 using LibraryManager.Infrastructure.Repositories;
+using LibraryManager.Application.ViewModels;
 
 var builder = WebApplication.CreateBuilder(args);
 

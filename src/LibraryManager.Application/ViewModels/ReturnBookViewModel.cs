@@ -1,4 +1,4 @@
-namespace LibraryManager.API.ViewModels
+namespace LibraryManager.Application.ViewModels
 {
     public class ReturnBookViewModel
     {

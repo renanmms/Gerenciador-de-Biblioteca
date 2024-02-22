@@ -1,7 +1,7 @@
 using FluentValidation;
-using LibraryManager.API.ViewModels;
+using LibraryManager.Application.ViewModels;
 
-namespace LibraryManager.API.Validators
+namespace LibraryManager.Application.Validators
 {
     public class CreateBookViewModelValidator : AbstractValidator<CreateBookViewModel>
     {

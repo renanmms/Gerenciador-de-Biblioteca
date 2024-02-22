@@ -1,5 +1,3 @@
-using LibraryManager.Core.Entities;
-
 namespace LibraryManager.Core.Entities
 {
     public class User
