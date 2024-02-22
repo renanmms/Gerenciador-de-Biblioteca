@@ -1,4 +1,4 @@
-using LibraryManager.API.Models;
+using LibraryManager.Core.Entities;
 
 namespace LibraryManager.API.ViewModels
 {

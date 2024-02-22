@@ -1,4 +1,4 @@
-namespace LibraryManager.API.Models
+namespace LibraryManager.Core.Entities
 {
     public class Loan
     {

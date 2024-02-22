@@ -1,8 +1,8 @@
-using LibraryManager.API.Models;
+using LibraryManager.Core.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace LibraryManager.API.Context.Configurations
+namespace LibraryManager.Infrastructure.Context.Configurations
 {
     public class BookConfigurations : IEntityTypeConfiguration<Book>
     {

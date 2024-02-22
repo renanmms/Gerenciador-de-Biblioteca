@@ -1,6 +1,6 @@
-using LibraryManager.API.Models;
+using LibraryManager.Core.Entities;
 
-namespace LibraryManager.API.Repositories.Interfaces
+namespace LibraryManager.Infrastructure.Repositories.Interfaces
 {
     public interface IUserRepository
     {

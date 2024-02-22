@@ -1,5 +1,5 @@
-using LibraryManager.API.Repositories.Interfaces;
 using LibraryManager.API.ViewModels;
+using LibraryManager.Infrastructure.Repositories.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LibraryManager.API.Controllers

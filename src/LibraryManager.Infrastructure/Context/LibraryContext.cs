@@ -1,8 +1,8 @@
 using System.Reflection;
-using LibraryManager.API.Models;
+using LibraryManager.Core.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace LibraryManager.API.Context
+namespace LibraryManager.Infrastructure.Context
 {
     public class LibraryContext : DbContext
     {

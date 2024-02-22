@@ -1,8 +1,8 @@
-using LibraryManager.API.Context;
-using LibraryManager.API.Models;
-using LibraryManager.API.Repositories.Interfaces;
+using LibraryManager.Core.Entities;
+using LibraryManager.Infrastructure.Context;
+using LibraryManager.Infrastructure.Repositories.Interfaces;
 
-namespace LibraryManager.API.Repositories
+namespace LibraryManager.Infrastructure.Repositories
 {
     public class UserRepository : IUserRepository
     {
