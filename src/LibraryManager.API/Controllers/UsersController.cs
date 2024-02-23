@@ -1,3 +1,4 @@
+using LibraryManager.Application.Services.Interfaces;
 using LibraryManager.Application.ViewModels;
 using LibraryManager.Infrastructure.Repositories.Interfaces;
 using Microsoft.AspNetCore.Mvc;
@@ -8,16 +9,16 @@ namespace LibraryManager.API.Controllers
     [Route("api/[controller]")]
     public class UsersController : ControllerBase
     {
-        private readonly IUserRepository _userRepository;
-        public UsersController(IUserRepository userRepository)
+        private readonly IUserService _userService;
+        public UsersController(IUserService userService)
         {
-            _userRepository = userRepository;
+            _userService = userService;
         }
 
         [HttpGet("get/{id}")]
         public IActionResult GetById(int id)
         {
-            var user = _userRepository.GetById(id);
+            var user = _userService.GetById(id);
             return Ok(user);
         }
 
@@ -26,7 +27,7 @@ namespace LibraryManager.API.Controllers
         {
             try
             {
-                var id = _userRepository.Create(UserViewModel.ToEntity(user));
+                var id = _userService.Create(user);
                 return Created(nameof(GetById), new {id = id});
             }
             catch (Exception ex)
