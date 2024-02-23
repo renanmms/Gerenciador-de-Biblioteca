@@ -5,6 +5,8 @@ using LibraryManager.Infrastructure.Context;
 using LibraryManager.Infrastructure.Repositories.Interfaces;
 using LibraryManager.Infrastructure.Repositories;
 using LibraryManager.Application.ViewModels;
+using LibraryManager.Application.Services.Interfaces;
+using LibraryManager.Application.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -23,6 +25,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<IBookRepository, BookRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IUserService, UserService>();
 
 var app = builder.Build();
 
