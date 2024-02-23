@@ -29,4 +29,4 @@ Develop a library management system with the following features:
 
 * [ ] Add JWT authorization
 * [ ] Add Unit of Work pattern
-* [ ] Implement clean architecture
+* [x] Implement clean architecture
