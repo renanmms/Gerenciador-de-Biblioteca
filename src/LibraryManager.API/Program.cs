@@ -8,6 +8,7 @@ using LibraryManager.Application.ViewModels;
 using LibraryManager.Application.Services.Interfaces;
 using LibraryManager.Application.Services;
 using LibraryManager.Infrastructure.Persistence.UoW;
+using LibraryManager.Infrastructure.AuthServices;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -32,6 +33,7 @@ builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IBookService, BookService>();
 builder.Services.AddScoped<ILoanService, LoanService>();
+builder.Services.AddScoped<IAuthService, AuthService>();
 
 var app = builder.Build();
 
