@@ -28,5 +28,5 @@ Develop a library management system with the following features:
 ### Personal goals
 
 * [ ] Add JWT authorization
-* [ ] Add Unit of Work pattern
+* [x] Add Unit of Work pattern
 * [x] Implement clean architecture
