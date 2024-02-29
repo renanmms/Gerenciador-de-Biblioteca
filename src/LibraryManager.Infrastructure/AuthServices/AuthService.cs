@@ -1,6 +1,7 @@
 using System;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
+using System.Security.Cryptography;
 using System.Text;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
@@ -13,6 +14,21 @@ namespace LibraryManager.Infrastructure.AuthServices
         public AuthService(IConfiguration configuration)
         {
             _configuration = configuration;
+        }
+
+        public string ComputeSha256Hash(string password)
+        {
+            using( var sha256Hash = SHA256.Create()){
+                var bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(password));
+
+                var builder = new StringBuilder();
+                
+                for(int i = 0; i < bytes.Length; i++){
+                    builder.Append(bytes[i].ToString("x2"));
+                }
+
+                return builder.ToString();
+            }
         }
 
         public string GenerateJwtToken(string email, string role)
