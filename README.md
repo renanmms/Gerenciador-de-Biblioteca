@@ -4,29 +4,13 @@ Project: Library Management System
 
 ## Project 1: Library Management System
 
-Develop a library management system with the following features:
+This project is an ASP.NET Web API that do book managament in a library and it's supposed to help librarians and readers to get easier access to create books and loans.
 
-* [x] Create a book
+In this project I applied some concepts and patterns learned in the course like Clean Architecture and Unit of Work.
 
-    * [x] Validate data (PLUS 1)
+### Technologies
 
-* [x] Get all books
-
-* [x] Get one book
-
-* [x] Delete book
-
-* [x] Create a user (PLUS 1)
-
-* [x] Create a loan (PLUS 1)
-
-    * [x] Create loan with limit date (PLUS 2)
-
-* [x] Bring back book (PLUS 2)
-    * [x] Show alert message if loan is expired (PLUS 2)
-
-### Personal goals
-
-* [ ] Add JWT authorization
-* [x] Add Unit of Work pattern
-* [x] Implement clean architecture
+* C#
+* .NET 7.0
+* Sql Server
+* Mapster
